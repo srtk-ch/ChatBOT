@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SrtkBOT AI Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="animated-bg"></div>
+
+  <div class="header">
+    <div id="typing-header" class="typing-text"></div>
+    <img src="static/srtkbot-logo.png.png" alt="SrtkBOT" class="logo">
+  </div>
+
+  <div class="chat-container">
+    <div class="sidebar" id="sidebar">
+      <button class="new-chat" onclick="startNewChat()">+ New Chat</button>
+      <ul id="chat-history"></ul>
+    </div>
+
+    <div class="chat-box">
+      <button class="toggle-sidebar" onclick="toggleSidebar()">☰</button>
+      <div id="chat-log" class="chat-log"></div>
+      <form id="chat-form">
+        <input type="text" id="user-input" placeholder="Ask something..." autocomplete="off" />
+        <button type="submit" id="send-btn">➤</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
